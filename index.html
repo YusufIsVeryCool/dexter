@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexter - Watch Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🔪 DEXTER</h1>
+        <p class="tagline">Tonight's the night...</p>
+    </header>
+
+    <div class="container">
+        <!-- Season Selector -->
+        <div class="season-selector" id="seasonSelector"></div>
+
+        <!-- Episode Grid -->
+        <div class="episode-grid" id="episodeGrid"></div>
+
+        <!-- Video Player -->
+        <div class="player-container" id="playerContainer" style="display:none;">
+            <button class="close-btn" onclick="closePlayer()">✕ Close</button>
+            <div class="player-header">
+                <h2 id="episodeTitle"></h2>
+                <label>
+                    <input type="checkbox" id="autoplayNext" checked>
+                    Auto-play next episode
+                </label>
+            </div>
+            <video id="videoPlayer" controls>
+                <source src="" type="video/mp4">
+                Your browser doesn't support video.
+            </video>
+            <div class="episode-nav">
+                <button id="prevEpisode" onclick="playPreviousEpisode()">← Previous Episode</button>
+                <button id="nextEpisode" onclick="playNextEpisode()">Next Episode →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
